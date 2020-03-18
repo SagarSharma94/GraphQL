@@ -1,0 +1,10 @@
+query catagoryList{
+  viewer{
+    categoryList{
+      name
+      _id
+    }
+  }
+}
+
+

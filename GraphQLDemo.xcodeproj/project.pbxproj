@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,16 @@
 		9BCDB4C323FD51A800FCD3AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BCDB4C123FD51A800FCD3AC /* Main.storyboard */; };
 		9BCDB4C523FD51AB00FCD3AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BCDB4C423FD51AB00FCD3AC /* Assets.xcassets */; };
 		9BCDB4C823FD51AB00FCD3AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BCDB4C623FD51AB00FCD3AC /* LaunchScreen.storyboard */; };
+		9BCDB4D423FE62C200FCD3AC /* CatagoryList.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 9BCDB4D323FE62C200FCD3AC /* CatagoryList.graphql */; };
+		9BCDB4D623FEA53600FCD3AC /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCDB4D523FEA53600FCD3AC /* API.swift */; };
+		9BCDB4D823FFD6BC00FCD3AC /* Netwrok.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCDB4D723FFD6BC00FCD3AC /* Netwrok.swift */; };
+		F171D35FA17B699FE2D3ED14 /* Pods_GraphQLDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7106BBB0FE2DF81EB72D9912 /* Pods_GraphQLDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28482A6D6B20EB58AE13A1A0 /* Pods-GraphQLDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraphQLDemo.release.xcconfig"; path = "Target Support Files/Pods-GraphQLDemo/Pods-GraphQLDemo.release.xcconfig"; sourceTree = "<group>"; };
+		7106BBB0FE2DF81EB72D9912 /* Pods_GraphQLDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GraphQLDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96B1492735E1E4FA42CDCDFB /* Pods-GraphQLDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GraphQLDemo.debug.xcconfig"; path = "Target Support Files/Pods-GraphQLDemo/Pods-GraphQLDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		9BCDB4B823FD51A800FCD3AC /* GraphQLDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraphQLDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BCDB4BB23FD51A800FCD3AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BCDB4BD23FD51A800FCD3AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,9 @@
 		9BCDB4C423FD51AB00FCD3AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BCDB4C723FD51AB00FCD3AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BCDB4C923FD51AB00FCD3AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BCDB4D323FE62C200FCD3AC /* CatagoryList.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = CatagoryList.graphql; sourceTree = "<group>"; };
+		9BCDB4D523FEA53600FCD3AC /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		9BCDB4D723FFD6BC00FCD3AC /* Netwrok.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Netwrok.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F171D35FA17B699FE2D3ED14 /* Pods_GraphQLDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37427E62371E56B5D278EA9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7106BBB0FE2DF81EB72D9912 /* Pods_GraphQLDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9BCDB4AF23FD51A800FCD3AC = {
 			isa = PBXGroup;
 			children = (
 				9BCDB4BA23FD51A800FCD3AC /* GraphQLDemo */,
 				9BCDB4B923FD51A800FCD3AC /* Products */,
+				A5959AE0F6CABB2AD4FA7A20 /* Pods */,
+				37427E62371E56B5D278EA9A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,8 +77,9 @@
 		9BCDB4BA23FD51A800FCD3AC /* GraphQLDemo */ = {
 			isa = PBXGroup;
 			children = (
-				9BCDB4BB23FD51A800FCD3AC /* AppDelegate.swift */,
+				9BCDB4D223FE5BB000FCD3AC /* Extensions */,
 				9BCDB4BD23FD51A800FCD3AC /* SceneDelegate.swift */,
+				9BCDB4BB23FD51A800FCD3AC /* AppDelegate.swift */,
 				9BCDB4BF23FD51A800FCD3AC /* ViewController.swift */,
 				9BCDB4C123FD51A800FCD3AC /* Main.storyboard */,
 				9BCDB4C423FD51AB00FCD3AC /* Assets.xcassets */,
@@ -67,6 +89,25 @@
 			path = GraphQLDemo;
 			sourceTree = "<group>";
 		};
+		9BCDB4D223FE5BB000FCD3AC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9BCDB4D323FE62C200FCD3AC /* CatagoryList.graphql */,
+				9BCDB4D523FEA53600FCD3AC /* API.swift */,
+				9BCDB4D723FFD6BC00FCD3AC /* Netwrok.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A5959AE0F6CABB2AD4FA7A20 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				96B1492735E1E4FA42CDCDFB /* Pods-GraphQLDemo.debug.xcconfig */,
+				28482A6D6B20EB58AE13A1A0 /* Pods-GraphQLDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +115,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BCDB4CC23FD51AB00FCD3AC /* Build configuration list for PBXNativeTarget "GraphQLDemo" */;
 			buildPhases = (
+				BA6CEF17E30BFFB3C194CA03 /* [CP] Check Pods Manifest.lock */,
 				9BCDB4B423FD51A800FCD3AC /* Sources */,
 				9BCDB4B523FD51A800FCD3AC /* Frameworks */,
 				9BCDB4B623FD51A800FCD3AC /* Resources */,
+				3A195AAA6B265CD159CE26CF /* [CP] Embed Pods Frameworks */,
+				9BCDB4CF23FD62DB00FCD3AC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -128,18 +172,80 @@
 				9BCDB4C823FD51AB00FCD3AC /* LaunchScreen.storyboard in Resources */,
 				9BCDB4C523FD51AB00FCD3AC /* Assets.xcassets in Resources */,
 				9BCDB4C323FD51A800FCD3AC /* Main.storyboard in Resources */,
+				9BCDB4D423FE62C200FCD3AC /* CatagoryList.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3A195AAA6B265CD159CE26CF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GraphQLDemo/Pods-GraphQLDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GraphQLDemo/Pods-GraphQLDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GraphQLDemo/Pods-GraphQLDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BCDB4CF23FD62DB00FCD3AC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "APOLLO_FRAMEWORK_PATH=\"$(eval find $FRAMEWORK_SEARCH_PATHS -name \"Apollo.framework\" -maxdepth 1)\"\nif [ -z \"$APOLLO_FRAMEWORK_PATH\" ]; then\necho \"error: Couldn't find Apollo.framework in FRAMEWORK_SEARCH_PATHS; make sure to add the framework to your project.\"\nexit 1\nfi\ncd \"${SRCROOT}/${TARGET_NAME}\"\n$APOLLO_FRAMEWORK_PATH/check-and-run-apollo-codegen.sh generate $(find . -name '*.graphql') --schema schema.json --output API.swift\n";
+		};
+		BA6CEF17E30BFFB3C194CA03 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GraphQLDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9BCDB4B423FD51A800FCD3AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BCDB4D823FFD6BC00FCD3AC /* Netwrok.swift in Sources */,
 				9BCDB4C023FD51A800FCD3AC /* ViewController.swift in Sources */,
 				9BCDB4BC23FD51A800FCD3AC /* AppDelegate.swift in Sources */,
+				9BCDB4D623FEA53600FCD3AC /* API.swift in Sources */,
 				9BCDB4BE23FD51A800FCD3AC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +388,7 @@
 		};
 		9BCDB4CD23FD51AB00FCD3AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96B1492735E1E4FA42CDCDFB /* Pods-GraphQLDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +407,7 @@
 		};
 		9BCDB4CE23FD51AB00FCD3AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28482A6D6B20EB58AE13A1A0 /* Pods-GraphQLDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
